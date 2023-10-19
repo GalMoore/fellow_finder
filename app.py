@@ -27,4 +27,11 @@ if uploaded_file :
                 'delimiter': ','})
     data = loader.load()
 
-st.write(data)
+# st.write(data)
+
+embeddings = OpenAIEmbeddings()
+vectorstore = FAISS.from_documents(data, embeddings)
+
+chain = ConversationalRetrievalChain.from_llm(
+llm = ChatOpenAI(temperature=0.0,model_name='gpt-3.5-turbo'),
+retriever=vectorstore.as_retriever())
