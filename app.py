@@ -6,3 +6,10 @@ from langchain.chains import ConversationalRetrievalChain
 from langchain.document_loaders.csv_loader import CSVLoader
 from langchain.vectorstores import FAISS
 import tempfile
+
+user_api_key = st.sidebar.text_input(
+    label="#### Your OpenAI API key 👇",
+    placeholder="Paste your openAI API key, sk-",
+    type="password")
+
+uploaded_file = st.sidebar.file_uploader("upload", type="csv")
