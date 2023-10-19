@@ -26,3 +26,5 @@ if uploaded_file :
     loader = CSVLoader(file_path=tmp_file_path, encoding="utf-8", csv_args={
                 'delimiter': ','})
     data = loader.load()
+
+st.write(data)
