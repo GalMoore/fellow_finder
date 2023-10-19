@@ -5,3 +5,6 @@ pandas==1.5.3
 matplotlib
 plotly
 tiktoken
+streamlit_chat 
+langchain  
+faiss-cpu
